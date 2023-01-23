@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TODO LIST</h1>
+
+      <div class="input-form">
+        <div class="input-form1">
+          <div class="input">
+            <h5>Titolo:</h5>
+            <input
+              class="title"
+              type="text"
+              id="titolo"
+              name="titolo"
+              value=""
+              maxlength="100"
+            />
+            <h5>Descrizione:</h5>
+
+            <textarea
+              class="descriptione"
+              id="descrizione"
+              name="descrizione"
+              maxlength="500"
+              rows="4"
+            ></textarea>
+
+            <div id="dataStato">
+              <div>
+                <h5>Data di scadenza</h5>
+                <input type="date" id="datepicker" name="datepicker" />
+              </div>
+              <div>
+                <h5>Stato:</h5>
+                <select id="statusSelect" name="statusSelect">
+                  <option value="Inserito">Inserito</option>
+                  <option value="In elaborazione">In elaborazione</option>
+                  <option value="Completato">Completato</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button" id="aggiungi" onclick="myFunction()">
+          Aggiungi
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="contents-list"></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
