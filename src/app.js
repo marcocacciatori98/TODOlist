@@ -24,7 +24,6 @@ class Tasks {
               <button class="button1" id="elimina" onclick="cancella(${element.id})">Elimina</button></div>
              </div>`;
           contentsList.innerHTML += tasks;
-          console.log("ciao");
         });
       })
       .catch((err) => console.log(err));
@@ -159,10 +158,8 @@ let val = false;
 async function modifica(id) {
   if (!val) {
     val = true;
-    console.log("fffff");
     await task.modifica(id);
   } else {
-    console.log("fefefefef");
     val = false;
     changeButton();
     document.getElementById(id + "contents").style.background = "#4048d913";
@@ -176,7 +173,6 @@ function changeSelectedOption(value) {
   const options = select.options;
   for (let i = 0; i < options.length; i++) {
     if (options[i].value === value) {
-      console.log("rrrr" + value);
       options[i].selected = true;
     } else {
       options[i].selected = false;
